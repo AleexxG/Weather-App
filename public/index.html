@@ -10,24 +10,32 @@
 </head>
 <body>
     <div class="weather">
-        <p>16 C</p>
-        <p>Belgrade</p>
-        <div>icon</div>
+        <p class="temperature">16 C</p>
+        <div class="weather_details">
+            <p class="city">Belgrade</p>
+            <div class="icon">icon</div>
+        </div>
     </div>
 
     <div class="info">
-        <div class="wind">
-            <p>Wind</p>
-            <p>TBD</p>
-            <div>icon</div>
-        </div>
-        <div class="precipitation">
-            <p>Precipitation</p>
-            <p>TBD</p>
-            <div>icon</div>
-        </div>
-        <div class="search">
-            <input type="text" class="search-input" placeholder="Enter Location">
+        <div class="overlay">
+            <div class="search">
+                <input type="text" class="search_input" placeholder="Enter Location">
+            </div>
+            <div class="wind">
+                <div class="wind_icon">icon</div>
+                <div class="wind_text">
+                    <p>Wind</p>
+                    <p>TBD</p>
+                </div>
+            </div>
+            <div class="precipitation">
+                <div class="prec_icon">icon</div>
+                <div class="prec_text">
+                    <p>Precipitation</p>
+                    <p>TBD</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
