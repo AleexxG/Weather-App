@@ -7,35 +7,46 @@
     <link href="index.css" rel="stylesheet">
     <script defer src="index.js"></script>
     <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/51cad990b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="weather">
         <p class="temperature">16 C</p>
         <div class="weather_details">
             <p class="city">Belgrade</p>
-            <div class="icon">icon</div>
+            <div class="icon">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
         </div>
     </div>
 
     <div class="info">
-        <div class="overlay">
-            <div class="search">
-                <input type="text" class="search_input" placeholder="Enter Location">
+        <div class="search">
+            <input type="text" class="search_input" placeholder="Enter Location">
+        </div>
+        <div class="wind">
+            <div class="wind_icon">
+                <i class="fa-solid fa-wind"></i>
             </div>
-            <div class="wind">
-                <div class="wind_icon">icon</div>
-                <div class="wind_text">
-                    <p>Wind</p>
-                    <p>TBD</p>
-                </div>
+            <div class="wind_text">
+                <p>Wind</p>
+                <p class="wind_num">33.6 km/h</p>
             </div>
-            <div class="precipitation">
-                <div class="prec_icon">icon</div>
-                <div class="prec_text">
-                    <p>Precipitation</p>
-                    <p>TBD</p>
-                </div>
+        </div>
+        <div class="precipitation">
+            <div class="prec_icon">
+                <i class="fa-solid fa-droplet"></i>
             </div>
+            <div class="prec_text">
+                <p>Precipitation</p>
+                <p class="prec_num">66%</p>
+            </div>
+        </div>
+        <div class="icon_details">
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+            <p>Cloudy</p>
         </div>
     </div>
 </body>
