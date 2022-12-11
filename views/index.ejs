@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/51cad990b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="overlay">
+        <div class="app">
+            <header>
+                <form action="/" method="post" class="search">
+                    <input type="text" name="city" placeholder="Enter a city name"
+                    class="city">
+                    <button class="search-btn" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </header>
+
+            <main class="info">
+                <b class="location">Belgrade</b>
+                <h1 class="temp">22</h1>
+                <p class="weather">Cloudy</p>
+            </main>
+
+            <footer class="details">
+                <aside class="pressure">
+                    <p>Pressure</p>
+                    <b class="pressuer_num">800mb</b>
+                </aside>
+                <aside class="wind">
+                    <p>Wind</p>
+                    <b class="wind_num">3.4 km</b>
+                </aside>
+                <aside class="humidity">
+                    <p>Humidity</p>
+                    <b class="humidity_num">66%</b>
+                </aside>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
