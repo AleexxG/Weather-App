@@ -24,28 +24,26 @@
             </header>
 
             <main class="info">
-                <b class="location">Belgrade</b>
-                <h1 class="temp">22</h1>
-                <p class="weather">Cloudy</p>
+                <b class="location"><%= sendData.location %></b>
+                <h1 class="temp"><%= sendData.temp %> °C</h1>
+                <p class="weather"><%= sendData.disc %></p>
             </main>
 
             <footer class="details">
                 <aside class="pressure">
                     <p>Pressure</p>
-                    <b class="pressuer_num">800mb</b>
+                    <b class="pressuer_num"><%= sendData.press %></b>
                 </aside>
                 <aside class="wind">
                     <p>Wind</p>
-                    <b class="wind_num">3.4 km</b>
+                    <b class="wind_num"><%= sendData.wind %></b>
                 </aside>
                 <aside class="humidity">
                     <p>Humidity</p>
-                    <b class="humidity_num">66%</b>
+                    <b class="humidity_num"><%= sendData.humid %></b>
                 </aside>
             </footer>
         </div>
     </div>
-
-    <script src="/app.js"></script>
 </body>
 </html>
