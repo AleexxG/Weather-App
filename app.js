@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    const sendData = {location: "None", temp: "N/A", disc: "None", press: "N/A", wind: "N/A", humid: "N/A"}
+    const sendData = {location: "- -", temp: "N/A", disc: "- -", press: "N/A", wind: "N/A", humid: "N/A"}
     res.render("index", {sendData: sendData});
 });
 
@@ -21,6 +21,8 @@ app.post("/", async (req, res) => {
         const weatherData = await response.json();
         
         const temp = Math.floor(weatherData.main.temp);
+        const icon = weatherData.weather[0].icon;
+        const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
         const disc = weatherData.weather[0].description;
         const press = weatherData.main.pressure;
         const wind = weatherData.wind.speed;
@@ -29,14 +31,15 @@ app.post("/", async (req, res) => {
         const sendData = {};
         sendData.location = location;
         sendData.temp = temp;
+        sendData.iconUrl = iconUrl;
         sendData.disc = disc;
         sendData.press = press;
         sendData.wind = wind;
         sendData.humid = humid;
         res.render("index", {sendData: sendData});
     } catch (error) {
-        console.log(error);
-        res.status(400).json({data: "Not Found!"})
+        console.log(error)
+        return res.status(400).send("Location Not Found");
     }
 });
 

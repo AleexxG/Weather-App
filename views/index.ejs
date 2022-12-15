@@ -10,40 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/51cad990b5.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="overlay">
-        <div class="app">
-            <header>
-                <form action="/" method="post" class="search">
-                    <input type="text" name="city" placeholder="Enter a city name"
+<body class="body">
+    <div class="app">
+        <header>
+            <form action="/" method="post" class="search">
+                <input type="text" name="city" placeholder="Enter a city name"
                     class="city">
-                    <button class="search-btn" type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-            </header>
+                <button class="search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </header>
 
-            <main class="info">
-                <b class="location"><%= sendData.location %></b>
-                <h1 class="temp"><%= sendData.temp %> °C</h1>
-                <p class="weather"><%= sendData.disc %></p>
-            </main>
+        <main class="info">
+            <b class="location"><%= sendData.location %></b>
+            <h1 class="temp"><%= sendData.temp %> °C</h1>
+            <img src="<%= sendData.iconUrl %>" class="icon" alt="weather-icon">
+            <p class="weather"><%= sendData.disc %></p>
+        </main>
 
-            <footer class="details">
-                <aside class="pressure">
-                    <p>Pressure</p>
-                    <b class="pressuer_num"><%= sendData.press %></b>
-                </aside>
-                <aside class="wind">
-                    <p>Wind</p>
-                    <b class="wind_num"><%= sendData.wind %></b>
-                </aside>
-                <aside class="humidity">
-                    <p>Humidity</p>
-                    <b class="humidity_num"><%= sendData.humid %></b>
-                </aside>
-            </footer>
-        </div>
+        <footer class="details">
+            <aside class="pressure">
+                <p>Pressure</p>
+                <b class="pressuer_num"><%= sendData.press %></b>
+            </aside>
+            <aside class="wind">
+                <p>Wind</p>
+                <b class="wind_num"><%= sendData.wind %></b>
+            </aside>
+            <aside class="humidity">
+                <p>Humidity</p>
+                <b class="humidity_num"><%= sendData.humid %></b>
+            </aside>
+        </footer>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

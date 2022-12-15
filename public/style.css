@@ -4,21 +4,17 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-body {
-    background-image: url(./img/belgrade.jpg);
+.body {
+    background-image: url(./img/clearSkyN.jpg);
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
 }
-.overlay {
-    background: rgb(0, 0, 0, .7);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
 
 .app {
-    background-image: url(./img/real\ cloudy.jpg);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -36,44 +32,59 @@ body {
 .search {
     display: flex;
 }
-.search input {
-    background: rgba(255, 255, 255, 0.35);
+.city {
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    width: 88%;
+    color: rgb(0, 0, 0, .4);
+    width: 85%;
     height: 40px;
     border-radius: 30px;
     border: none;
+    outline: 0;
     margin-left: 0;
+    padding-left: 1rem;
 }
+
 .search-btn {
-    border: none;
-    color: rgb(0, 0, 0, .4);
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    border: none;
+    color: rgb(0, 0, 0, .4);
     text-align: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 0;
+    cursor: pointer;
 }
 
 
 /* Main content: City and temperature */
 
 .info {
-    padding-top: 4rem;
+    position: relative;
+    margin-top: 4rem;
 }
 .location {
+    text-transform: capitalize;
     font-size: 45px;
     font-weight: 500;
 }
 .temp {
     font-size: 60px;
     font-weight: 700;
+    margin: 0;
+}
+.icon {
+    position: absolute;
+    width: 80px;
+    top: 50px;
+    left: 160px;
 }
 .weather {
+    text-transform: capitalize;
     font-size: 20px;
     font-weight: 400;
 }
@@ -90,7 +101,7 @@ body {
 }
 
 .pressure {
-    background: rgb(22, 29, 65, .4);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     width: 160px;
@@ -108,7 +119,7 @@ body {
 }
 
 .wind {
-    background: rgb(151, 210, 236, .4);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     width: 160px;
@@ -126,7 +137,7 @@ body {
 }
 
 .humidity {
-    background: rgb(254, 245, 172, .4);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     width: 160px;
