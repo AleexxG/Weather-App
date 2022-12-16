@@ -147,3 +147,87 @@
     font-size: 25px;
     font-weight: 700;
 }
+
+
+@media screen and (max-width: 768px) {
+    .app {
+        height: 350px;
+        width: 420px;
+    }
+
+    .search {
+        display: flex;
+    }
+    .city {
+        width: 80%;
+        height: 35px;
+    }
+    
+    .search-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    
+    /* Main content: City and temperature */
+    
+    .info {
+        margin-top: 3rem;
+    }
+    .location {
+        font-size: 30px;
+    }
+    .weather_data {
+        top: 25px;
+    }
+    .temp {
+        font-size: 50px;
+    }
+    .weather {
+        top: 110px;
+    }
+    
+    
+    /* Pressure, Wind, Humadity */
+    
+    .pressure {
+        width: 127px;
+        height: 90px;
+        border-radius: 11px;
+    }
+    
+    .wind {
+        width: 127px;
+        height: 90px;
+        border-radius: 11px;
+    }
+    
+    .humidity {
+        width: 127px;
+        height: 90px;
+        border-radius: 11px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .app {
+        border-radius: 0;
+        height: 400px;
+    }
+
+
+    /* Main content: City and temperature */
+    
+    .location {
+        font-size: 45px;
+    }
+    .weather_data {
+        top: 50px;
+    }
+    .temp {
+        font-size: 60px;
+    }
+    .weather {
+        top: 150px;
+    }
+}
