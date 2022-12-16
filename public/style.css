@@ -3,27 +3,24 @@
     padding: auto;
     font-family: 'Urbanist', sans-serif;
 }
-
-.body {
+.bg_img {
     background-image: url(./img/clearSkyN.jpg);
-    background-position: center;
+    background-position: top;
     object-fit: cover;
     background-repeat: no-repeat;
 }
-
 .app {
-    background: rgba(255, 255, 255, 0.15);
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    background-position: center;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    margin-top: 13rem;
     height: 420px;
     width: 520px;
     border-radius: 20px;
     padding: 2.5rem;
-    position: relative;
 }
 
 
@@ -65,28 +62,30 @@
 
 .info {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 .location {
     text-transform: capitalize;
     font-size: 45px;
     font-weight: 500;
 }
+.weather_data {
+    position: absolute;
+    display: inline-flex;
+    flex-wrap: wrap;
+    top: 50px;
+    left: 0;
+}
 .temp {
     font-size: 60px;
     font-weight: 700;
-    margin: 0;
-}
-.icon {
-    position: absolute;
-    width: 80px;
-    top: 50px;
-    left: 160px;
 }
 .weather {
     text-transform: capitalize;
     font-size: 20px;
     font-weight: 400;
+    position: absolute;
+    top: 150px;
 }
 
 
@@ -101,9 +100,8 @@
 }
 
 .pressure {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgb(72, 72, 74);
+    color: white;
     width: 160px;
     height: 100px;
     border-radius: 22px;
@@ -119,9 +117,7 @@
 }
 
 .wind {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgb(242, 242, 241);
     width: 160px;
     height: 100px;
     border-radius: 22px;
@@ -137,9 +133,7 @@
 }
 
 .humidity {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgb(236, 110, 76);
     width: 160px;
     height: 100px;
     border-radius: 22px;
